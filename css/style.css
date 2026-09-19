@@ -38,11 +38,11 @@
   --color-border: #D0EBFF;
   --color-border-subtle: #E5EFF7;
   
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-xl: 16px;
-  --radius-2xl: 24px;
-  --radius-full: 9999px;
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-xl: 4px;
+  --radius-2xl: 4px;
+  --radius-full: 4px;
 
   --shadow-sm: 0 2px 4px rgba(19, 50, 77, 0.04);
   --shadow-md: 0 4px 14px rgba(19, 50, 77, 0.08);
@@ -240,7 +240,7 @@ h1, h2, h3, h4, .font-display {
   color: #FFFFFF;
   font-weight: 800;
   padding: 0.15rem 0.5rem;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   font-size: 0.7rem;
   letter-spacing: 0.02em;
 }
@@ -345,7 +345,7 @@ h1, h2, h3, h4, .font-display {
   right: 0;
   height: 3px;
   background-color: var(--color-primary);
-  border-radius: 3px 3px 0 0;
+  border-radius: 2px 2px 0 0;
 }
 
 .header-actions {
@@ -750,7 +750,7 @@ h1, h2, h3, h4, .font-display {
   font-weight: 800;
   text-transform: uppercase;
   padding: 0.15rem 0.45rem;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   display: inline-block;
   margin-bottom: 0.35rem;
 }
@@ -915,7 +915,7 @@ h1, h2, h3, h4, .font-display {
 .qty-btn {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1017,7 +1017,7 @@ h1, h2, h3, h4, .font-display {
 .step-num-badge {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: var(--radius-sm);
   background-color: var(--color-primary);
   color: white;
   font-size: 1.25rem;
@@ -1491,7 +1491,7 @@ h1, h2, h3, h4, .font-display {
    Mobile Fixes (web ini mayoritas dibuka di HP)
    ========================================================================== */
 :root {
-  --radius-lg: 14px; /* dipakai .price-row-card tapi sebelumnya belum didefinisikan */
+  --radius-lg: 4px; /* dipakai .price-row-card tapi sebelumnya belum didefinisikan */
 }
 
 body {

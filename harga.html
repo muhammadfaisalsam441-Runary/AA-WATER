@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Daftar Harga Terpampang Lengkap — AA WATER (Tukar vs Beli)</title>
+  <title>Daftar Harga Lengkap — AA WATER (Tukar vs Beli)</title>
   <meta name="description" content="Katalog harga lengkap galon air & tabung gas 3kg AA WATER. Harga jelas tanpa biaya siluman: Galon tukar Rp5rb, Gas tukar Rp22rb, ongkir Rp3.000/item.">
   
   <link rel="stylesheet" href="css/style.css">
@@ -43,7 +43,7 @@
       <!-- Desktop Nav (Tanpa Langganan) -->
       <nav class="main-nav">
         <a href="index.html" class="nav-link">Beranda</a>
-        <a href="harga.html" class="nav-link active">Harga Terpampang</a>
+        <a href="harga.html" class="nav-link active">Harga</a>
         <a href="area.html" class="nav-link">Area Layanan</a>
         <a href="kontak.html" class="nav-link">Kontak & Depot</a>
       </nav>
@@ -59,7 +59,7 @@
     <!-- Mobile Drawer Nav (Tanpa Langganan) -->
     <div class="mobile-nav-drawer" id="mobileNavDrawer">
       <a href="index.html" class="mobile-nav-link">Beranda <span>&rarr;</span></a>
-      <a href="harga.html" class="mobile-nav-link active">Harga Terpampang <span>&rarr;</span></a>
+      <a href="harga.html" class="mobile-nav-link active">Harga <span>&rarr;</span></a>
       <a href="area.html" class="mobile-nav-link">Cek Area Layanan <span>&rarr;</span></a>
       <a href="kontak.html" class="mobile-nav-link">Kontak & Alamat Depot <span>&rarr;</span></a>
     </div>
@@ -70,7 +70,7 @@
     <section class="section section-bg">
       <div class="container">
         <div class="section-tag">Katalog Resmi & Akurat</div>
-        <h1 class="section-title">Harga Terpampang: Tanpa Biaya Siluman</h1>
+        <h1 class="section-title">Harga: Tanpa Biaya Siluman</h1>
         <p class="section-sub">
           Di AA WATER, semua harga kami buka terang-benderang. Harga barang pas + Ongkir tetap Rp3.000 per item sampai depan pintu Anda.
         </p>
@@ -126,7 +126,7 @@
               <tr>
                 <td><strong>🔥 Gas LPG 3KG</strong></td>
                 <td><span class="item-tag tag-beli">Beli Tabung + Gas 3kg</span></td>
-                <td><strong style="color:#000000; font-size:1.2rem;">Rp197.000</strong></td>
+                <td><strong style="color:#000000; font-size:1.2rem;">Rp250.000</strong></td>
                 <td><span style="color:#000000; font-weight:700;">Rp3.000 / item</span></td>
                 <td>Tabung resmi SNI + isi gas LPG 3kg penuh dan tersegel resmi. Siap colok kompor.</td>
               </tr>
@@ -210,7 +210,7 @@
             <div class="builder-row">
               <div class="builder-row-info">
                 <div class="builder-row-title">🔥 Beli Tabung + Gas 3kg</div>
-                <div class="builder-row-price">Rp197.000 / tabung (+ ongkir Rp3rb)</div>
+                <div class="builder-row-price">Rp250.000 / tabung (+ ongkir Rp3rb)</div>
               </div>
               <div class="qty-control">
                 <button type="button" class="qty-btn js-qty-minus" data-item="gas_tabung_isi">-</button>
@@ -218,13 +218,39 @@
                 <button type="button" class="qty-btn js-qty-plus" data-item="gas_tabung_isi">+</button>
               </div>
             </div>
+
+            <!-- Galon Baru (Tanpa Isi) -->
+            <div class="builder-row">
+              <div class="builder-row-info">
+                <div class="builder-row-title">💧 Galon Baru (Tanpa Isi)</div>
+                <div class="builder-row-price">Rp30.000 / galon (+ ongkir Rp3rb)</div>
+              </div>
+              <div class="qty-control">
+                <button type="button" class="qty-btn js-qty-minus" data-item="galon_baru" aria-label="Kurangi Galon Baru Tanpa Isi">-</button>
+                <span class="qty-display js-qty-val" data-item="galon_baru">0</span>
+                <button type="button" class="qty-btn js-qty-plus" data-item="galon_baru" aria-label="Tambah Galon Baru Tanpa Isi">+</button>
+              </div>
+            </div>
+
+            <!-- Beli Tabung Gas Kosong -->
+            <div class="builder-row">
+              <div class="builder-row-info">
+                <div class="builder-row-title">🔥 Beli Tabung Gas Kosong</div>
+                <div class="builder-row-price">Rp175.000 / tabung (+ ongkir Rp3rb)</div>
+              </div>
+              <div class="qty-control">
+                <button type="button" class="qty-btn js-qty-minus" data-item="gas_tabung_baru" aria-label="Kurangi Beli Tabung Gas Kosong">-</button>
+                <span class="qty-display js-qty-val" data-item="gas_tabung_baru">0</span>
+                <button type="button" class="qty-btn js-qty-plus" data-item="gas_tabung_baru" aria-label="Tambah Beli Tabung Gas Kosong">+</button>
+              </div>
+            </div>
           </div>
 
           <div class="builder-summary-card">
             <div>
-              <div class="builder-total-label" id="builderItemCount">2 item dipilih • Ongkir Rp6.000</div>
-              <div class="builder-total-price" id="builderSubtotal">Rp33.000</div>
-              <div class="builder-total-desc" id="builderSummaryDesc">Galon (Tukar Isi) x1 • Gas 3kg (Tukar Tabung) x1</div>
+              <div class="builder-total-label" id="builderItemCount">0 item dipilih • Ongkir Rp0</div>
+              <div class="builder-total-price" id="builderSubtotal">Rp0</div>
+              <div class="builder-total-desc" id="builderSummaryDesc">Pilih jumlah di atas, atau langsung klik tombol untuk order via WA</div>
             </div>
             <div class="builder-action-btns">
               <button type="button" class="btn btn-wa btn-lg" id="btnSendOrderWA">
@@ -252,7 +278,7 @@
           <div class="footer-col-title">Navigasi Halaman</div>
           <ul class="footer-links">
             <li><a href="index.html">Beranda</a></li>
-            <li><a href="harga.html">Harga Terpampang</a></li>
+            <li><a href="harga.html">Harga</a></li>
             <li><a href="area.html">Cek Area Layanan</a></li>
             <li><a href="kontak.html">Kontak & Lokasi Depot</a></li>
           </ul>

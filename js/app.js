@@ -28,7 +28,7 @@ const AA_CONFIG = {
     galon_isi_baru: { name: 'Galon + Isi Baru', price: 35000, type: 'beli' },
     gas_tukar: { name: 'Gas 3kg (Tukar Tabung)', price: 22000, type: 'tukar' },
     gas_tabung_baru: { name: 'Beli Tabung Gas Baru (Kosong)', price: 175000, type: 'beli' },
-    gas_tabung_isi: { name: 'Beli Tabung + Gas 3kg', price: 197000, type: 'beli' }
+    gas_tabung_isi: { name: 'Beli Tabung + Gas 3kg', price: 250000, type: 'beli' }
   }
 };
 
