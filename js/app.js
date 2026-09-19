@@ -178,11 +178,9 @@ function updateCalculatorDisplay() {
   $('#builderItemCount').text(`${totalItems} item dipilih • Ongkir ${formatRupiah(deliveryFee)}`);
   
   if (totalItems === 0) {
-    $('#builderSummaryDesc').text('Pilih minimal 1 galon atau gas di atas untuk order');
-    $('#btnSendOrderWA').addClass('disabled').css('opacity', '0.6');
+    $('#builderSummaryDesc').text('Pilih jumlah di atas, atau langsung klik tombol untuk order via WA');
   } else {
     $('#builderSummaryDesc').text(`${itemSummary.join(' • ')} (Barang: ${formatRupiah(subtotal)} + Ongkir: ${formatRupiah(deliveryFee)})`);
-    $('#btnSendOrderWA').removeClass('disabled').css('opacity', '1');
   }
 }
 
@@ -226,19 +224,14 @@ Antar segera < 60 menit ya bang!`;
 }
 
 function launchWhatsAppOrder() {
-  let totalItems = 0;
-  for (const key in orderCart) {
-    totalItems += orderCart[key];
-  }
-
-  if (totalItems === 0) {
-    alert('Silakan pilih minimal 1 galon atau tabung gas terlebih dahulu.');
-    return;
-  }
-
+  // Selalu buka WA: kalau belum pilih barang, kirim template order kosong
   const message = generateWhatsAppMessage();
   const waUrl = `https://wa.me/${AA_CONFIG.phone}?text=${encodeURIComponent(message)}`;
-  window.open(waUrl, '_blank');
+  const waWindow = window.open(waUrl, '_blank');
+  if (!waWindow) {
+    // Popup diblokir (sering terjadi di browser bawaan aplikasi HP)
+    window.location.href = waUrl;
+  }
 }
 
 /**
