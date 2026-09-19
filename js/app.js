@@ -10,8 +10,8 @@
 
 // Konfigurasi Bisnis
 const AA_CONFIG = {
-  phone: '6285796101879',
-  displayPhone: '0857-9610-1879',
+  phone: '6281342460279',
+  displayPhone: '0813-4246-0279',
   address: 'Jl. Borong Raya 1 lr 1 No. 12 A, Kelurahan Borong, Kec. Manggala, Makassar',
   openHour: 8,   // 08:00
   closeHour: 21, // 21:00
