@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Cakupan Area Pengiriman — AA WATER Borong Raya</title>
+  <meta name="description" content="Daftar wilayah jangkauan pengiriman galon & gas 3kg AA WATER. Jl. Borong Raya, Kel. Borong Raya, Batua, Toddopuli. Antar < 60 menit, ongkir Rp3.000/item.">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+</head>
+<body>
+
+  <!-- Top Operational Status Strip -->
+  <div class="top-status-strip">
+    <div class="container top-status-content">
+      <div class="status-pill-live js-store-status open">
+        <span class="status-indicator-dot"></span>
+        <span class="js-status-text"><strong>BUKA</strong> • 08.00 – 21.00 WITA (Kurir Siap Antar)</span>
+      </div>
+      <div class="top-info-right">
+        <span class="sla-badge-small">⚡ ANTAR &lt; 60 MENIT</span>
+        <span>📍 Borong Raya, Batua, Toddopuli • Ongkir Rp3.000/item</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="AA WATER Beranda">
+        <div class="brand-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+          </svg>
+        </div>
+        <div class="brand-title-wrap">
+          <div class="brand-name">AA WATER <span>🔥</span></div>
+          <span class="brand-sub">Antar Galon & Gas</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav (Tanpa Langganan) -->
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="harga.html" class="nav-link">Harga Terpampang</a>
+        <a href="area.html" class="nav-link active">Area Layanan</a>
+        <a href="kontak.html" class="nav-link">Kontak & Depot</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/6282188990011" target="_blank" class="btn btn-sm btn-wa js-wa-direct">
+          Order Sekarang
+        </a>
+        <button class="mobile-nav-toggle" id="mobileMenuToggle" aria-label="Buka Menu">&#9776;</button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Nav (Tanpa Langganan) -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <a href="index.html" class="mobile-nav-link">Beranda <span>&rarr;</span></a>
+      <a href="harga.html" class="mobile-nav-link">Harga Terpampang <span>&rarr;</span></a>
+      <a href="area.html" class="mobile-nav-link active">Cek Area Layanan <span>&rarr;</span></a>
+      <a href="kontak.html" class="mobile-nav-link">Kontak & Alamat Depot <span>&rarr;</span></a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section class="section section-bg">
+      <div class="container">
+        <div class="section-tag">Radius Fokus & Cepat</div>
+        <h1 class="section-title">Wilayah Pengantaran & Estimasi Waktu</h1>
+        <p class="section-sub">
+          Pangkalan kami berlokasi di <strong>Jl. Borong Raya 1 lr 1 No. 12 A</strong>. Kami membatasi jangkauan khusus pada 4 wilayah terdekat agar pengantaran selalu kilat di bawah 60 menit dengan ongkir terjangkau <strong>Rp3.000 / item</strong>.
+        </p>
+
+        <!-- Area Search Box -->
+        <div style="background:white; border:2px solid var(--color-border); border-radius:var(--radius-xl); padding:1.5rem; margin-bottom: 2rem;">
+          <label for="areaSearchInput" style="display:block; font-weight:800; font-size:1.05rem; margin-bottom:0.5rem; color:var(--color-ink);">
+            🔍 Cek Status Alamat Anda:
+          </label>
+          <div class="area-checker-input-wrap" style="max-width:100%; margin-bottom:1rem;">
+            <input type="text" id="areaSearchInput" class="input-utility" placeholder="Ketik Jl. Borong Raya, Kel. Borong, Batua, atau Toddopuli...">
+            <button type="button" class="btn btn-primary" id="btnCekArea">Cek Status</button>
+          </div>
+          <div id="areaSearchResult" class="area-check-result"></div>
+
+          <div style="font-size:0.85rem; color:var(--color-ink-muted); margin-top:0.5rem;">
+            💡 <em>Klik salah satu chip wilayah di bawah untuk cek estimasi kurir:</em>
+          </div>
+          <div class="chips-container" style="margin-top:0.75rem; margin-bottom:0;">
+            <div class="area-chip active" data-area="Jl. Borong Raya"><span class="chip-dot"></span> Jl. Borong Raya</div>
+            <div class="area-chip" data-area="Kelurahan Borong Raya"><span class="chip-dot"></span> Kel. Borong Raya</div>
+            <div class="area-chip" data-area="Batua"><span class="chip-dot"></span> Batua</div>
+            <div class="area-chip" data-area="Toddopuli"><span class="chip-dot"></span> Toddopuli</div>
+          </div>
+        </div>
+
+        <!-- Tabel 4 Wilayah & Estimasi Waktu Kurir -->
+        <div class="table-responsive" style="margin-bottom: 2.5rem; box-shadow: var(--shadow-md);">
+          <table class="utility-table">
+            <thead>
+              <tr>
+                <th>Wilayah / Kelurahan</th>
+                <th>Status Wilayah</th>
+                <th>Estimasi Tiba (SLA)</th>
+                <th>Ongkos Kirim</th>
+                <th>Aksi Cepat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Jl. Borong Raya (Termasuk Lr. 1 & Sekitarnya)</strong></td>
+                <td><span class="item-tag tag-tukar">Ring 1 (Depot)</span></td>
+                <td><strong style="color:var(--color-primary);">⚡ 10 – 20 Menit</strong></td>
+                <td><strong style="color:#000000;">Rp3.000 / item</strong></td>
+                <td>
+                  <a href="https://wa.me/6282188990011?text=Halo%20AA%20WATER,%20saya%20di%20Jl.%20Borong%20Raya.%20Pesan%20sekarang!" target="_blank" class="btn btn-sm btn-outline-primary">Order &rarr;</a>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Kelurahan Borong Raya</strong></td>
+                <td><span class="item-tag tag-tukar">Ring 1</span></td>
+                <td><strong style="color:var(--color-primary);">⚡ 15 – 25 Menit</strong></td>
+                <td><strong style="color:#000000;">Rp3.000 / item</strong></td>
+                <td>
+                  <a href="https://wa.me/6282188990011?text=Halo%20AA%20WATER,%20saya%20di%20Kelurahan%20Borong%20Raya.%20Pesan%20sekarang!" target="_blank" class="btn btn-sm btn-outline-primary">Order &rarr;</a>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Batua & Sekitarnya</strong></td>
+                <td><span class="item-tag tag-tukar">Ring 2</span></td>
+                <td><strong style="color:var(--color-primary);">⚡ 20 – 30 Menit</strong></td>
+                <td><strong style="color:#000000;">Rp3.000 / item</strong></td>
+                <td>
+                  <a href="https://wa.me/6282188990011?text=Halo%20AA%20WATER,%20saya%20di%20Batua.%20Pesan%20sekarang!" target="_blank" class="btn btn-sm btn-outline-primary">Order &rarr;</a>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Toddopuli & Kompleks</strong></td>
+                <td><span class="item-tag tag-tukar">Ring 2</span></td>
+                <td><strong style="color:var(--color-primary);">⚡ 20 – 35 Menit</strong></td>
+                <td><strong style="color:#000000;">Rp3.000 / item</strong></td>
+                <td>
+                  <a href="https://wa.me/6282188990011?text=Halo%20AA%20WATER,%20saya%20di%20Toddopuli.%20Pesan%20sekarang!" target="_blank" class="btn btn-sm btn-outline-primary">Order &rarr;</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Outside Area Banner -->
+        <div class="outside-area-banner">
+          <div>
+            <div class="outside-banner-text">📍 Lokasi Anda di luar 4 wilayah utama di atas?</div>
+            <div class="outside-banner-sub">Tanya dulu lewat WhatsApp, siapa tahu kurir kami sedang melintasi area Anda!</div>
+          </div>
+          <a href="https://wa.me/6282188990011?text=Halo%20AA%20WATER,%20mau%20tanya%20apakah%20bisa%20antar%20ke%20alamat%20saya%20ini?" target="_blank" class="btn btn-accent js-wa-direct">
+            Tanya Kurir via WA
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>AA WATER</h3>
+          <div class="footer-tagline">Galon dan gas LPG sampai depan rumah</div>
+          <p class="footer-desc">
+            Antar galon & gas 3kg area Jl. Borong Raya, Kel. Borong Raya, Batua, dan Toddopuli. Cepat, sigap, andalan tetangga.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigasi Halaman</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="harga.html">Harga Terpampang</a></li>
+            <li><a href="area.html">Cek Area Layanan</a></li>
+            <li><a href="kontak.html">Kontak & Lokasi Depot</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Pangkalan & Jam Buka</div>
+          <p style="font-size:0.875rem; margin-bottom:0.5rem; color:#A5D8FF;">
+            📍 Jl. Borong Raya 1 lr 1 No. 12 A, Kelurahan Borong, Kec. Manggala, Makassar<br>
+            🕒 08.00 – 21.00 WITA<br>
+            ⚡ Garansi Antar &lt; 60 Menit • Ongkir Rp3.000/item
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 NGALIR. Hak cipta dilindungi undang-undang.</div>
+        <div class="footer-bottom-brand">AA WATER • Jl. Borong Raya 1 lr 1 No. 12 A Makassar</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky WA Bar -->
+  <div class="mobile-floating-bar">
+    <div class="mobile-floating-info">
+      <span class="floating-sla">⚡ ANTAR &lt; 60 MENIT</span>
+      <span class="floating-status js-floating-status">🟢 <strong>Buka</strong> (Siap Kirim)</span>
+    </div>
+    <a href="https://wa.me/6282188990011" target="_blank" class="btn btn-wa mobile-floating-btn js-wa-direct">
+      Order Sekarang
+    </a>
+  </div>
+
+  <!-- JQUERY & JAVASCRIPT APP (Lokal & Cepat) -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
