@@ -34,8 +34,8 @@ const AA_CONFIG = {
 
 // Keranjang Pesanan Real-time
 let orderCart = {
-  galon_tukar: 1,      // Default 1 galon tukar
-  gas_tukar: 1,        // Default 1 gas tukar
+  galon_tukar: 0,
+  gas_tukar: 0,
   galon_baru: 0,
   galon_isi_baru: 0,
   gas_tabung_baru: 0,
