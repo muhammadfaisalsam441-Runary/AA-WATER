@@ -32,15 +32,18 @@ const AA_CONFIG = {
   }
 };
 
-// Keranjang Pesanan Real-time
-let orderCart = {
-  galon_tukar: 0,
-  gas_tukar: 0,
-  galon_baru: 0,
-  galon_isi_baru: 0,
-  gas_tabung_baru: 0,
-  gas_tabung_isi: 0
-};
+// Data dari database (dikirim PHP lewat partials/footer.php).
+// Kalau ada, nilai di atas ditimpa supaya harga di JavaScript selalu
+// sama dengan harga di database.
+if (typeof window !== 'undefined' && window.AA_DATA) {
+  Object.assign(AA_CONFIG, window.AA_DATA);
+}
+
+// Keranjang Pesanan Real-time — isi awal 0 untuk setiap produk
+let orderCart = {};
+for (const kode in AA_CONFIG.pricing) {
+  orderCart[kode] = 0;
+}
 
 // Helper Format Rupiah
 function formatRupiah(number) {
@@ -79,8 +82,16 @@ $(document).ready(function() {
 });
 
 /**
- * 1. LOGIKA STATUS OPERASIONAL TOKO (08.00 - 21.00)
+ * 1. LOGIKA STATUS OPERASIONAL TOKO
+ *    Jam buka dan tutup diambil dari database lewat AA_CONFIG,
+ *    jadi ikut berubah saat diubah di halaman admin.
  */
+
+// Ubah angka jam menjadi tulisan, misal 8 menjadi "08.00"
+function formatJam(jam) {
+  return String(jam).padStart(2, '0') + '.00';
+}
+
 function updateStoreStatus() {
   const now = new Date();
   const currentHour = now.getHours();
@@ -103,11 +114,11 @@ function updateStoreStatus() {
     const timeLeftStr = hoursLeft > 0 ? `${hoursLeft} jam lagi` : `${minsLeft} menit lagi`;
 
     $statusPill.removeClass('closed').addClass('open');
-    $statusText.html(`<strong>BUKA</strong> • 08.00 – 21.00 WITA (Tutup dlm ${timeLeftStr})`);
+    $statusText.html(`<strong>BUKA</strong> • ${formatJam(AA_CONFIG.openHour)} – ${formatJam(AA_CONFIG.closeHour)} WITA (Tutup dlm ${timeLeftStr})`);
     $floatingStatus.html('🟢 <strong>Buka</strong> (Siap Kirim)');
   } else {
     $statusPill.removeClass('open').addClass('closed');
-    $statusText.html(`<strong>TUTUP</strong> • Buka besok 08.00 WITA (Bisa jadwalkan pesan sekarang)`);
+    $statusText.html(`<strong>TUTUP</strong> • Buka besok ${formatJam(AA_CONFIG.openHour)} WITA (Bisa jadwalkan pesan sekarang)`);
     $floatingStatus.html('🔴 <strong>Tutup</strong> (Pesan utk besok)');
   }
 }
